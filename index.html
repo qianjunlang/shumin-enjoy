@@ -133,7 +133,8 @@
             show(list);
             // 动态创建script标签，使用百度提供的接口，将查询字符串编码后，写到src当中
             var s = document.createElement('script');
-            s.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + encodeURI(this.value.trim()) + '&json=1&p=3&sid=1457_21105_17001_22158&req=2&csor=1&pwd=7&cb=fn';
+            s.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + encodeURI(this.value.trim()) 
+		    //+ '&json=1&p=3&sid=1457_21105_17001_22158&req=2&csor=1&pwd=7&cb=fn';
             // 插入到文档后获取jsonp格式的数据，然后调用callback函数，将data数据以参数的形式传入
             document.body.appendChild(s);
         } else {
